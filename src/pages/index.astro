@@ -1,0 +1,46 @@
+---
+import Stripshelf from "../components/stripholder/stripshelf.svelte";
+import V2strip from "../components/strips/v2.svelte";
+let stripinf = [
+	{
+		wtc: "Heavy",
+		nof: "1",
+		dep: "KJFK",
+		cs: "BEL2246",
+		ssr: "1000",
+		ew: "W",
+		e8: "8",
+		eRnav: "P",
+		eCPDLC: "1",
+		tn: "OO-SNC",
+		des: "EBBR",
+		rl: "FL360",
+	},
+];
+// cs aInf CID ssr des rl rFL
+let v2inf = {
+	cs: "BEL2246",
+	aInf: "H/A333/L",
+	CID: "VATSIM SID",
+	ssr: "1000",
+	des: "EHAM",
+	rFL: "FL360",
+	route: "ENGM/01L N0448F380 VIPA1A VIPPA DCT BAVTA N873 JUIST P174 EEL N872 LILSI/N0449F370 Z310 WOODY WODY8A EBBR/01"
+}
+let t = JSON.stringify(stripinf);
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>v1</h1>
+		<Stripshelf stripinf={{ stripinf }} />
+		<h1>v2</h1>
+		<V2strip stripinf={{ v2inf }} />
+	</body>
+</html>
