@@ -24,6 +24,7 @@
     let promise = awyep();
 </script>
 
+<link rel="stylesheet" href="styles.css" />
 <div class="stripshelfv2">
     {#await promise then flights}
         worked
@@ -32,14 +33,3 @@
         {/each}
     {/await}
 </div>
-<style>
-    .stripshelfv2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-        width:25%;
-        gap: 10px;
-    }
-</style>
