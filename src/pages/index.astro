@@ -1,22 +1,6 @@
 ---
-import Stripshelf from "../components/stripholder/stripshelf.svelte";
-import V2strip from "../components/strips/v2.svelte";
-let stripinf = [
-	{
-		wtc: "Heavy",
-		nof: "1",
-		dep: "KJFK",
-		cs: "BEL2246",
-		ssr: "1000",
-		ew: "W",
-		e8: "8",
-		eRnav: "P",
-		eCPDLC: "1",
-		tn: "OO-SNC",
-		des: "EBBR",
-		rl: "FL360",
-	},
-];
+import V2shelf from "../components/v2shelf.svelte";
+
 // cs aInf CID ssr des rl rFL
 let v2inf = {
 	cs: "BEL2246",
@@ -27,7 +11,6 @@ let v2inf = {
 	rFL: "FL360",
 	route: "ENGM/01L N0448F380 VIPA1A VIPPA DCT BAVTA N873 JUIST P174 EEL N872 LILSI/N0449F370 Z310 WOODY WODY8A EBBR/01"
 }
-let t = JSON.stringify(stripinf);
 ---
 <html lang="en">
 	<head>
@@ -38,9 +21,12 @@ let t = JSON.stringify(stripinf);
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>v1</h1>
-		<Stripshelf stripinf={{ stripinf }} />
-		<h1>v2</h1>
-		<V2strip stripinf={{ v2inf }} />
+		<h1>Welcome, check out our github</h1>
+		<V2shelf client:load client:only/>
+		<footer>
+			<p>
+				<a href="https://github.com/emidblol/07-12-2023_EmileFS">Github</a>
+			</p>
+		</footer>
 	</body>
 </html>

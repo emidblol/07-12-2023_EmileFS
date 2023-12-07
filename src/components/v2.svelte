@@ -1,6 +1,6 @@
 <script>
     export let stripinf;
-    let stripinfo = stripinf.v2inf;
+    let stripinfo = stripinf;
     console.log(stripinfo);
     // cs aInf CID ssr des rFL
 </script>
