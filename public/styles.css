@@ -17,17 +17,28 @@ input[type="number"] {
         "finf aFL   dest route route route route" 40px
         "finf rFL   dest route route route route" 40px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #ffffff;
-    width: 95%;
+    width: 100%;
+    user-select: none;
 }
 .stripparent {
     display: flex;
     justify-content: center;
-    background-color: #7a0000;
     border: 1px solid black;
-    width: 100%;
+    width: 97%;
+    user-select: none;
+    padding-left: 10px;
 }
 .strip div {
     border: 1px solid black;
+    user-select: none;
+}
+.strip input {
+    border: none;
+    background-color: #ffffff;
+    width: 92%;
+    height: 94%;
+    text-align: center;
+    font-size: 1rem;
 }
 .stripflex {
     display: flex;
@@ -42,5 +53,9 @@ input[type="number"] {
     align-items: center;
     padding-left: 10px;
     width:25%;
-    gap: 10px;
+    gap: 1px;
+}
+.abomination {
+    /*Use monospace font*/
+    font-family: "Courier New", Courier, monospace;
 }

@@ -9,9 +9,26 @@ let v2inf = {
 	ssr: "1000",
 	des: "EHAM",
 	rFL: "FL360",
-	route: "ENGM/01L N0448F380 VIPA1A VIPPA DCT BAVTA N873 JUIST P174 EEL N872 LILSI/N0449F370 Z310 WOODY WODY8A EBBR/01"
+	route: "ENGM/01L N0448F380 VIPA1A VIPPA DCT BAVTA N873 JUIST P174 EEL N872 LILSI/N0449F370 Z310 WOODY WODY8A EBBR/01",
+};
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
 }
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+
 ---
+<script>
+	function drop(ev) {
+}
+function allowDrop(ev) {
+}
+
+</script>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -22,10 +39,31 @@ let v2inf = {
 	</head>
 	<body>
 		<h1>Welcome, check out our github</h1>
-		<V2shelf client:load client:only/>
+		<h2 style="position:absolute;right:30%;top:7.5%;">Sections</h2>
+		<div
+			style="width:20%; height:100%; position:absolute; right:0; top:15%; background-color:grey;"
+			class="abomination"
+			ondrop="event.preventDefault();var data = event.dataTransfer.getData('text');console.log(data);event.target.appendChild(document.getElementById(data));"
+			ondragover="event.preventDefault();"
+		></div>
+		<div
+			style="width:20%; height:100%; position:absolute; right:20%; top:15%; background-color:lightgrey;"
+			class="abomination"
+			ondrop="event.preventDefault();var data = event.dataTransfer.getData('text');console.log(data);event.target.appendChild(document.getElementById(data));"
+			ondragover="event.preventDefault();"
+		></div>
+		<div
+			style="width:20%; height:100%; position:absolute; right:40%; top:15%; background-color:grey;"
+			class="abomination"
+			ondrop="event.preventDefault();var data = event.dataTransfer.getData('text');console.log(data);event.target.appendChild(document.getElementById(data));"
+			ondragover="event.preventDefault();"
+		></div>
+		<V2shelf client:load client:only />
 		<footer>
 			<p>
-				<a href="https://github.com/emidblol/07-12-2023_EmileFS">Github</a>
+				<a href="https://github.com/emidblol/07-12-2023_EmileFS"
+					>Github</a
+				>
 			</p>
 		</footer>
 	</body>
